@@ -1,0 +1,108 @@
+:root {
+  --bg-0: #09111f;
+  --bg-1: #071b33;
+  --card: #0f2138;
+  --border: #2f4a6b;
+  --text: #d9f0ff;
+  --muted: #8ab1d4;
+  --snake: #80f4b3;
+  --snake-head: #b2ffd0;
+  --food: #ff5f7d;
+  --grid: #21364f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Courier New", "Lucida Console", monospace;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 20%, #1f3d63 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, #0d2948 0%, transparent 45%),
+    linear-gradient(135deg, var(--bg-0), var(--bg-1));
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.game-card {
+  width: min(94vw, 640px);
+  border: 2px solid var(--border);
+  border-radius: 18px;
+  padding: 1.2rem;
+  background: color-mix(in oklab, var(--card) 88%, black 12%);
+  box-shadow: 0 18px 38px #0006;
+}
+
+.game-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: 0.2em;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+}
+
+.scoreboard {
+  display: flex;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.scoreboard p {
+  margin: 0;
+}
+
+#score,
+#high-score {
+  color: var(--text);
+  font-weight: 700;
+}
+
+#game {
+  margin-top: 0.9rem;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #071625;
+  display: block;
+}
+
+.status {
+  margin: 0.8rem 0 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  min-height: 1.2em;
+}
+
+.help {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 520px) {
+  .game-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .scoreboard {
+    gap: 0.75rem;
+  }
+}

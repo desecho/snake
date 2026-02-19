@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="game-card">
+        <header class="game-header">
+          <h1>SNAKE</h1>
+          <div class="scoreboard">
+            <p>Score <span id="score">0</span></p>
+            <p>High <span id="high-score">0</span></p>
+          </div>
+        </header>
+        <canvas id="game" width="480" height="480" aria-label="Snake game board"></canvas>
+        <p class="status" id="status-text">Press an arrow key or WASD to start</p>
+        <p class="help">Arrows/WASD: Move | Space: Pause | Enter/R: Restart</p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
